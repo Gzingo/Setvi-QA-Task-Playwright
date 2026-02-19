@@ -9,7 +9,7 @@ Automated API test suite for the Setvi AI-powered RFQ (Request for Quote) module
 
 ```bash
 git clone <repo-url>
-cd "Setvi-Task RFQ API Tests"
+cd Setvi-QA-Task-Playwright
 npm install
 cp .env.example .env
 # Edit .env and add your API key from the task documentation
