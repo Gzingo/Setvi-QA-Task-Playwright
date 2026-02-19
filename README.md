@@ -11,6 +11,7 @@ Automated API test suite for the Setvi AI-powered RFQ (Request for Quote) module
 git clone <repo-url>
 cd Setvi-QA-Task-Playwright
 npm install
+npx playwright install
 cp .env.example .env
 # Edit .env and add your API key from the task documentation
 npm test
