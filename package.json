@@ -1,0 +1,28 @@
+{
+  "name": "setvi-task-rfq-api-tests",
+  "version": "1.0.0",
+  "description": "Automated API tests for Setvi RFQ module (25 test cases covering 10 bugs)",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:negative": "npx playwright test tests/negative/",
+    "test:positive": "npx playwright test tests/positive/",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [
+    "setvi",
+    "rfq",
+    "api-testing",
+    "playwright"
+  ],
+  "author": "Nikola Nikolić",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
