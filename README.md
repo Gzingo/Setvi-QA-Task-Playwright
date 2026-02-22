@@ -3,7 +3,7 @@
 Automated API test suite for the Setvi AI-powered RFQ (Request for Quote) module.
 25 test cases covering 10 documented bugs across 2 API endpoints.
 
-**Last verified:** 2026-02-19 -- all 25 tests verified against live API
+**Last verified:** 2026-02-19 - all 25 tests verified against live API
 
 ## Quick Start
 
@@ -68,8 +68,8 @@ Tests verify **expected (correct) behavior** from bug reports. No `test.fail()` 
 
 | Result | Meaning                                                  |
 | ------ | -------------------------------------------------------- |
-| Pass   | Bug is FIXED -- API behaves as expected                  |
-| Fail   | Bug STILL EXISTS -- API does not match expected behavior |
+| Pass   | Bug is FIXED - API behaves as expected                  |
+| Fail   | Bug STILL EXISTS - API does not match expected behavior |
 
 All tests use the actual API response structure (`body.result.matchedItems[0]?.matchedInternalProducts`).
 
@@ -104,5 +104,5 @@ All tests use the actual API response structure (`body.result.matchedItems[0]?.m
 1. **B02**: No metadata to identify private label products in API response
 2. ~~**B05, B06**: Product page URL needed~~
    **RESOLVED**: using Amazon `https://www.amazon.com/dp/B0BVZLHNMB` (kitchen knife, reproduces P3 bug)
-3. **B07, B08**: Bug report describes score variance (±0.07), but live testing (2026-02-19) shows product variance instead (different product returned for same input, scores stable at 99). Tolerance (±1 / ±2) is informal -- no official spec
+3. **B07, B08**: Bug report describes score variance (±0.07), but live testing (2026-02-19) shows product variance instead (different product returned for same input, scores stable at 99). Tolerance (±1 / ±2) is informal, no official spec
 4. **B09-B12**: Expected fields (price, sku, vendor, inStock, imageUrl) based on bug report, not formal API schema. Live API uses different names: `unitPrice` (empty), `sku`, `vendor.name`, `isStockProduct`, `images[].path`. Only `price` is truly missing
