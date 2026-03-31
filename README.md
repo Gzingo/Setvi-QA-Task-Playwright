@@ -106,3 +106,7 @@ All tests use the actual API response structure (`body.result.matchedItems[0]?.m
    **RESOLVED**: using Amazon `https://www.amazon.com/dp/B0BVZLHNMB` (kitchen knife, reproduces P3 bug)
 3. **B07, B08**: Bug report describes score variance (±0.07), but live testing (2026-02-19) shows product variance instead (different product returned for same input, scores stable at 99). Tolerance (±1 / ±2) is informal, no official spec
 4. **B09-B12**: Expected fields (price, sku, vendor, inStock, imageUrl) based on bug report, not formal API schema. Live API uses different names: `unitPrice` (empty), `sku`, `vendor.name`, `isStockProduct`, `images[].path`. Only `price` is truly missing
+
+## Author
+
+[**Nikola Nikolić** — QA Automation Engineer](https://github.com/Gzingo)
